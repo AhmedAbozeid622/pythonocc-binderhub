@@ -10,7 +10,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 ##############
 RUN apt-get update
 RUN apt-get install -y wget libglu1-mesa-dev libgl1-mesa-dev libxmu-dev libxi-dev
-RUN apt-get install -yq apt-utils && apt-get install -y iputils-ping >/dev/null 2>&1
+RUN apt-get install -yq apt-utils >/dev/null 2>&1
+# RUN apt-get install -y iputils-ping
 RUN dpkg-reconfigure --frontend noninteractive tzdata
 
 #########################################################
